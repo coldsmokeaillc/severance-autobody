@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Severance Autobody — Since 1989</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
+<style>:root{--cream:#F5E6C8;--rust:#C0392B;--deep:#8B0000;--gold:#D4AC0D;--chrome:#B8BCC2;--dark:#1A1A1A;--coal:#2C2C2C;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Oswald',sans-serif;background:var(--dark);color:var(--cream);min-height:100vh;}
+header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(26,26,26,.97);border-bottom:3px solid var(--rust);box-shadow:0 2px 20px rgba(0,0,0,.8);}
+.header-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;height:78px;}
+.logo-area{display:flex;align-items:center;gap:.8rem;cursor:pointer;}
+.logo-icon{width:46px;height:46px;background:var(--rust);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;}
+.brand{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:var(--cream);letter-spacing:1px;line-height:1.1;}
+.tagline{font-size:.6rem;color:var(--gold);letter-spacing:3px;text-transform:uppercase;}
+nav ul{display:flex;list-style:none;gap:.1rem;}
+nav a{text-decoration:none;color:var(--chrome);font-family:'Oswald',sans-serif;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;padding:.45rem .75rem;transition:all .2s;cursor:pointer;display:block;}
+nav a:hover,nav a.active{color:var(--cream);background:var(--rust);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px;}
+.hamburger span{width:25px;height:2px;background:var(--cream);}
+.page{display:none;}.page.active{display:block;}
+.hero{position:relative;height:100vh;min-height:580px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background-image:url('https://musclecarworkshop.com/wp-content/uploads/2011/10/871x388.jpg');background-size:cover;background-position:center 40%;filter:brightness(.42) sepia(.3);}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,26,26,.2) 0%,rgba(139,0,0,.1) 40%,rgba(26,26,26,.9) 100%);}
+.hero-content{position:relative;z-index:2;text-align:center;padding:2rem;max-width:860px;}
+.hero-badge{display:inline-block;border:2px solid var(--gold);color:var(--gold);font-size:.68rem;letter-spacing:5px;text-transform:uppercase;padding:.35rem 1.4rem;margin-bottom:1.4rem;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,8vw,6.5rem);font-weight:900;line-height:.95;color:var(--cream);text-shadow:3px 3px 20px rgba(0,0,0,.95);}
+.hero h1 em{font-style:italic;color:var(--rust);display:block;}
+.hero-divider{width:80px;height:3px;background:linear-gradient(90deg,transparent,var(--rust),var(--gold),var(--rust),transparent);margin:1.5rem auto;}
+.hero-sub{font-size:clamp(.8rem,2vw,1.1rem);letter-spacing:4px;text-transform:uppercase;color:var(--chrome);margin-bottom:2.2rem;}
+.hero-cta{display:inline-flex;gap:1rem;flex-wrap:wrap;justify-content:center;}
+.scroll-hint{position:absolute;bottom:1.8rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:.4rem;opacity:.55;}
+.scroll-hint span{font-size:.58rem;letter-spacing:3px;text-transform:uppercase;color:var(--chrome);}
+.scroll-arrow{width:18px;height:18px;border-right:2px solid var(--chrome);border-bottom:2px solid var(--chrome);transform:rotate(45deg);animation:bounce 1.5s infinite;}
+@keyframes bounce{0%,100%{transform:rotate(45deg) translateY(0)}50%{transform:rotate(45deg) translateY(5px)}}
+.btn{background:var(--rust);color:var(--cream);border:none;padding:.85rem 2.2rem;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:all .2s;}
+.btn:hover{background:var(--deep);transform:translateY(-2px);box-shadow:0 5px 20px rgba(192,57,43,.5);}
+.btn-outline{background:transparent;color:var(--cream);border:2px solid var(--chrome);padding:.85rem 2.2rem;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:all .2s;}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
+.btn-sm{font-size:.7rem;padding:.5rem 1.1rem;letter-spacing:2px;}
+.sec-hdr{text-align:center;margin-bottom:3rem;}
+.sec-label{font-size:.63rem;letter-spacing:5px;text-transform:uppercase;color:var(--rust);margin-bottom:.6rem;}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;color:var(--cream);}
+.sec-title span{color:var(--rust);font-style:italic;}
+.divline{width:56px;height:3px;background:linear-gradient(90deg,var(--rust),var(--gold));margin:.8rem auto 0;}
+.page-hero{height:38vh;min-height:260px;position:relative;display:flex;align-items:center;justify-content:center;margin-top:78px;}
+.page-hero .hero-bg{filter:brightness(.3) sepia(.45);}
+.page-hero-content{position:relative;z-index:2;text-align:center;}
+.page-hero-content h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:900;color:var(--cream);text-shadow:2px 2px 15px rgba(0,0,0,.95);}
+.page-hero-content p{font-size:.75rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-top:.4rem;}
+.home-features{background:var(--coal);padding:5rem 2rem;border-top:3px solid var(--rust);}
+.feat-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.8rem;}
+.feat-card{background:var(--dark);border:1px solid #333;border-top:3px solid var(--rust);padding:1.8rem;text-align:center;transition:all .2s;}
+.feat-card:hover{transform:translateY(-5px);box-shadow:0 10px 30px rgba(192,57,43,.2);}
+.feat-icon{font-size:2.2rem;margin-bottom:.8rem;}
+.feat-card h3{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--cream);margin-bottom:.6rem;}
+.feat-card p{color:#999;font-weight:300;font-size:.88rem;line-height:1.7;}
+.wrap{max-width:1000px;margin:0 auto;padding:4.5rem 2rem;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start;}
+.about-text h2{font-family:'Playfair Display',serif;font-size:1.9rem;color:var(--cream);margin-bottom:.9rem;}
+.about-text h2 em{color:var(--rust);}
+.about-text p{color:#aaa;line-height:1.9;margin-bottom:1rem;font-weight:300;font-size:.92rem;}
+.quote-block{border-left:3px solid var(--rust);padding-left:1.4rem;margin:1.8rem 0;}
+.quote-block p{font-family:'Playfair Display',serif;font-style:italic;font-size:1.05rem;color:var(--cream)!important;}
+.photo-col{position:sticky;top:100px;}
+.photo-col img{width:100%;border:3px solid var(--rust);filter:sepia(.2);margin-bottom:1rem;}
+.owner-card{background:var(--coal);border:1px solid #333;padding:1.4rem;}
+.owner-card h4{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--cream);margin-bottom:.2rem;}
+.owner-role{font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem;}
+.owner-links a{display:block;color:var(--chrome);text-decoration:none;font-size:.83rem;font-weight:300;margin-bottom:.3rem;transition:color .2s;}
+.owner-links a:hover{color:var(--gold);}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#333;margin-bottom:3.5rem;}
+.stat-box{background:var(--coal);padding:1.8rem;text-align:center;}
+.stat-num{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:900;color:var(--rust);display:block;}
+.stat-lbl{font-size:.68rem;letter-spacing:3px;text-transform:uppercase;color:#999;margin-top:.2rem;}
+.orn{text-align:center;color:var(--rust);font-size:1.3rem;margin:1.8rem 0;opacity:.5;}
+.srv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.4rem;margin-top:2.5rem;}
+.srv-card{background:var(--coal);border:1px solid #333;position:relative;transition:all .3s;overflow:hidden;}
+.srv-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--rust),var(--gold));}
+.srv-card:hover{transform:translateY(-5px);box-shadow:0 15px 40px rgba(0,0,0,.5);border-color:var(--rust);}
+.srv-inner{padding:1.8rem;}
+.srv-num{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:var(--rust);opacity:.25;line-height:1;margin-bottom:.4rem;}
+.srv-icon{font-size:1.8rem;margin-bottom:.8rem;}
+.srv-card h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--cream);margin-bottom:.7rem;}
+.srv-card p{color:#999;font-weight:300;line-height:1.7;font-size:.88rem;}
+.soon-box{background:var(--coal);border:2px solid var(--rust);padding:4rem 2rem;margin-top:2.5rem;text-align:center;}
+.soon-box h2{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--cream);margin-bottom:1rem;}
+.soon-box p{color:#999;font-weight:300;max-width:480px;margin:0 auto;}
+.port-wrap{max-width:1250px;margin:0 auto;padding:4rem 2rem;}
+.port-controls{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;}
+.filter-tabs{display:flex;gap:.4rem;flex-wrap:wrap;}
+.ftab{background:transparent;border:1px solid #444;color:#999;padding:.38rem .9rem;font-family:'Oswald',sans-serif;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s;}
+.ftab:hover,.ftab.active{background:var(--rust);border-color:var(--rust);color:var(--cream);}
+.port-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.4rem;}
+.pcard{background:var(--coal);border:1px solid #333;overflow:hidden;cursor:pointer;transition:all .3s;position:relative;}
+.pcard:hover{transform:translateY(-5px);box-shadow:0 15px 40px rgba(0,0,0,.7);border-color:var(--rust);}
+.pcard img{width:100%;height:195px;object-fit:cover;display:block;transition:transform .3s;filter:sepia(.12);}
+.pcard:hover img{transform:scale(1.05);filter:sepia(0);}
+.pcard-info{padding:1.1rem;}
+.pcard-info h3{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--cream);margin-bottom:.25rem;}
+.pcard-info p{color:#777;font-size:.78rem;font-weight:300;}
+.pbadge{position:absolute;top:.7rem;left:.7rem;background:var(--rust);color:var(--cream);font-size:.58rem;letter-spacing:2px;text-transform:uppercase;padding:.22rem .55rem;}
+.cat-tag{display:inline-block;background:rgba(192,57,43,.15);border:1px solid var(--rust);color:var(--rust);font-size:.62rem;letter-spacing:2px;text-transform:uppercase;padding:.18rem .45rem;margin-top:.4rem;}
+.admin-bar{background:var(--coal);border:1px solid #333;border-bottom:3px solid var(--gold);padding:.9rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.8rem;}
+.admin-bar span{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);}
+.admin-btn{background:var(--gold);color:var(--dark);border:none;padding:.45rem 1.1rem;font-family:'Oswald',sans-serif;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s;}
+.admin-btn:hover{background:var(--cream);}
+.edit-ov{position:absolute;inset:0;background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;gap:.5rem;z-index:5;}
+.pcard:hover .edit-ov{display:flex;}
+.edbtn{background:var(--dark);border:1px solid var(--cream);color:var(--cream);padding:.38rem .75rem;font-family:'Oswald',sans-serif;font-size:.68rem;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .2s;}
+.edbtn:hover,.edbtn.del:hover{background:var(--rust);border-color:var(--rust);}
+.con-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start;}
+.con-info h2{font-family:'Playfair Display',serif;font-size:1.9rem;color:var(--cream);margin-bottom:.9rem;}
+.con-info h2 em{color:var(--rust);}
+.con-info>p{color:#999;font-weight:300;line-height:1.8;margin-bottom:1.8rem;font-size:.9rem;}
+.con-detail{display:flex;gap:.9rem;align-items:flex-start;margin-bottom:1.4rem;}
+.c-icon{font-size:1.1rem;min-width:28px;margin-top:.1rem;}
+.c-lbl{font-size:.62rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:.15rem;}
+.c-val{color:var(--cream);font-weight:300;font-size:.92rem;}
+.c-val a{color:var(--cream);text-decoration:none;transition:color .2s;}
+.c-val a:hover{color:var(--gold);}
+.con-form{background:var(--coal);border:1px solid #333;border-top:3px solid var(--rust);padding:2.2rem;}
+.con-form h3{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--cream);margin-bottom:1.3rem;}
+.form-ok{background:rgba(39,174,96,.12);border:1px solid #27ae60;color:#27ae60;padding:.9rem;font-size:.82rem;letter-spacing:1px;display:none;margin-bottom:1rem;}
+.fg{margin-bottom:1.1rem;}
+.fg label{display:block;font-size:.67rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.35rem;}
+.fg input,.fg textarea,.fg select{width:100%;background:var(--dark);border:1px solid #444;color:var(--cream);padding:.7rem .9rem;font-family:'Oswald',sans-serif;font-size:.88rem;font-weight:300;outline:none;transition:border-color .2s;border-radius:0;}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--rust);}
+.fg select option{background:var(--dark);}
+.fg textarea{height:78px;resize:vertical;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;}
+.cbrow{display:flex;align-items:center;gap:.5rem;}
+.cbrow input[type=checkbox]{width:auto;}
+.cbrow label{margin-bottom:0;font-size:.78rem;letter-spacing:1px;}
+.modal-ov{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:2000;display:none;align-items:center;justify-content:center;padding:1.5rem;}
+.modal-ov.open{display:flex;}
+.modal{background:var(--coal);border:1px solid #444;border-top:3px solid var(--rust);max-width:540px;width:100%;max-height:90vh;overflow-y:auto;}
+.modal-hdr{display:flex;align-items:center;justify-content:space-between;padding:1.4rem 1.8rem;border-bottom:1px solid #333;}
+.modal-hdr h3{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--cream);}
+.modal-x{background:none;border:none;color:#666;font-size:1.5rem;cursor:pointer;transition:color .2s;}
+.modal-x:hover{color:var(--cream);}
+.modal-body{padding:1.8rem;}
+.modal-ftr{padding:1.4rem 1.8rem;border-top:1px solid #333;display:flex;justify-content:flex-end;gap:.9rem;}
+.btn-cancel{background:transparent;border:1px solid #555;color:#999;padding:.55rem 1.3rem;font-family:'Oswald',sans-serif;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s;}
+.btn-cancel:hover{border-color:var(--cream);color:var(--cream);}
+.btn-save{background:var(--rust);border:none;color:var(--cream);padding:.55rem 1.8rem;font-family:'Oswald',sans-serif;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s;}
+.btn-save:hover{background:var(--deep);}
+.img-prev{width:100%;height:130px;object-fit:cover;display:block;border:1px solid #444;margin-top:.5rem;}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:3000;display:none;align-items:center;justify-content:center;flex-direction:column;padding:2rem;}
+.lightbox.open{display:flex;}
+.lightbox img{max-width:90vw;max-height:76vh;object-fit:contain;}
+.lb-info{text-align:center;margin-top:1rem;}
+.lb-info h3{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--cream);}
+.lb-info p{color:#999;font-size:.82rem;margin-top:.3rem;}
+.lb-x{position:fixed;top:1.5rem;right:1.5rem;background:none;border:1px solid #555;color:var(--cream);font-size:1.4rem;width:46px;height:46px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;}
+.lb-x:hover{background:var(--rust);border-color:var(--rust);}
+footer{background:#111;border-top:3px solid var(--rust);padding:2.8rem 2rem 2rem;text-align:center;}
+.ft-logo{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:900;color:var(--cream);margin-bottom:.25rem;}
+.ft-tag{font-size:.62rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:1.3rem;}
+.ft-links{display:flex;justify-content:center;gap:1.8rem;flex-wrap:wrap;margin-bottom:1.8rem;}
+.ft-links a{color:#666;text-decoration:none;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:color .2s;}
+.ft-links a:hover{color:var(--rust);}
+.ft-div{width:50px;height:1px;background:var(--rust);margin:0 auto 1.3rem;}
+.ft-copy{font-size:.67rem;color:#444;letter-spacing:1px;}
+.toast{position:fixed;bottom:2rem;right:2rem;background:var(--coal);border:1px solid var(--rust);border-left:3px solid var(--rust);color:var(--cream);padding:.9rem 1.4rem;font-size:.82rem;z-index:9999;opacity:0;transform:translateY(20px);transition:all .3s;pointer-events:none;}
+.toast.show{opacity:1;transform:translateY(0);}
+.loading{text-align:center;padding:3rem;color:#555;font-size:.78rem;letter-spacing:3px;text-transform:uppercase;}
+.empty{text-align:center;padding:3.5rem 2rem;color:#555;}
+.empty h3{font-family:'Playfair Display',serif;font-size:1.4rem;color:#666;margin-bottom:.4rem;}
+@media(max-width:900px){
+.hamburger{display:flex;}
+nav ul{position:absolute;top:78px;left:0;right:0;background:rgba(22,22,22,.99);flex-direction:column;padding:1rem;border-bottom:3px solid var(--rust);display:none;}
+nav ul.open{display:flex;}
+nav a{font-size:.88rem;padding:.7rem 1rem;}
+.about-grid,.con-grid{grid-template-columns:1fr;}
+.photo-col{position:static;}
+.stats-row{grid-template-columns:1fr;}
+.frow{grid-template-columns:1fr;}
+}</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-area" id="logo-btn">
+      <div class="logo-icon">&#128295;</div>
+      <div><div class="brand">Severance Autobody</div><div class="tagline">Superior Craftsmanship Since 1989</div></div>
+    </div>
+    <nav>
+      <ul id="nav-menu">
+        <li><a href="#home" data-page="home">Home</a></li>
+        <li><a href="#about" data-page="about">About</a></li>
+        <li><a href="#awards" data-page="awards">Awards &amp; Publications</a></li>
+        <li><a href="#services" data-page="services">Services</a></li>
+        <li><a href="#portfolio" data-page="portfolio">Portfolio</a></li>
+        <li><a href="#contact" data-page="contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" id="hamburger-btn"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<div id="page-home" class="page active">
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Northern Colorado&#39;s Premier Muscle Car Shop</div>
+      <h1>Severance<em>Autobody</em></h1>
+      <div class="hero-divider"></div>
+      <p class="hero-sub">First Generation Camaro Specialists &nbsp;&bull;&nbsp; 1950s&#8211;1970s Muscle Cars</p>
+      <div class="hero-cta">
+        <button class="btn" data-goto="portfolio">View Our Work</button>
+        <button class="btn-outline" data-goto="contact">Get In Touch</button>
+      </div>
+    </div>
+    <div class="scroll-hint"><span>Scroll</span><div class="scroll-arrow"></div></div>
+  </section>
+  <section class="home-features">
+    <div class="sec-hdr"><p class="sec-label">What We Do</p><h2 class="sec-title">Built With <span>Passion</span></h2><div class="divline"></div></div>
+    <div class="feat-grid">
+      <div class="feat-card"><div class="feat-icon">&#127912;</div><h3>Show Quality Paint</h3><p>Expert body and paint work is our specialty. Fit, finish, and attention to detail is never overlooked. All vehicles stripped to bare metal and hand crafted from the ground up.</p></div>
+      <div class="feat-card"><div class="feat-icon">&#128297;</div><h3>Complete Builds</h3><p>From dream, to design, to completion &#8212; we work with you every step to make your dream a reality, hassle free, for a truly satisfying experience.</p></div>
+      <div class="feat-card"><div class="feat-icon">&#127937;</div><h3>100+ Camaros Built</h3><p>First generation Camaro specialists with over 100 completed builds. No one knows these cars better &#8212; building them since 1989.</p></div>
+      <div class="feat-card"><div class="feat-icon">&#128295;</div><h3>Muscle Car Parts</h3><p>Authorized dealer with Classic Industries, Goodmark Industries and Auto Metal Direct for the best local prices on your build.</p></div>
+    </div>
+  </section>
+  <footer>
+    <div class="ft-logo">Severance Autobody</div><div class="ft-tag">Superior Automotive Refinishing Since 1989</div>
+    <div class="ft-links">
+      <a href="#home" data-page="home">Home</a>
+      <a href="#about" data-page="about">About</a>
+      <a href="#awards" data-page="awards">Awards</a>
+      <a href="#services" data-page="services">Services</a>
+      <a href="#portfolio" data-page="portfolio">Portfolio</a>
+      <a href="#contact" data-page="contact">Contact</a>
+    </div>
+    <div class="ft-div"></div>
+    <p class="ft-copy">&copy; 2026 Severance Autobody &nbsp;&middot;&nbsp; 133 E. 4th Ave., Severance, CO 80546 &nbsp;&middot;&nbsp; 970-686-2756</p>
+  </footer>
+</div>
+
+<div id="page-about" class="page">
+  <div class="page-hero"><div class="hero-bg"></div><div class="page-hero-content"><h1>Our Story</h1><p>History &middot; Purpose &middot; Vision</p></div></div>
+  <div class="wrap">
+    <div class="stats-row">
+      <div class="stat-box"><span class="stat-num">35+</span><p class="stat-lbl">Years in Business</p></div>
+      <div class="stat-box"><span class="stat-num">100+</span><p class="stat-lbl">Camaros Built</p></div>
+      <div class="stat-box"><span class="stat-num">1</span><p class="stat-lbl">Uncompromising Standard</p></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>Roots in the <em>1960s</em></h2>
+        <p>Our roots go back to the 1960s when my Dad purchased and operated Severance Garage. His focus was mechanic work, then later introduced paint and body work to his business operations.</p>
+        <p>He has always been a car enthusiast since the 50s &#8212; when he purchased his first new car, a 1957 Chevy 2-door hardtop, black with red interior. His passion was transferred to me as I grew up around the business.</p>
+        <div class="quote-block"><p>&#8220;A strong desire to build muscle cars developed &#8212; and it never left.&#8221;</p></div>
+        <p>Early experiences with Hot Wheels and plastic model builds fueled my desire for the real thing. A 1971 Rally Sport Z/28 Camaro was the first build I was involved with in 1980. My first personal car &#8212; a 1968 Firebird 400 &#8212; was restored in 1981.</p>
+        <p>My Autobody business began in 1989. Since 2005, my entire focus has been high-end rotisserie restorations. First generation Camaro builds are my specialty with over 100 completed.</p>
+        <div class="orn">&#8212; &#10087; &#8212;</div>
+        <p>Looking for a shop with knowledge, experience, integrity and dedication to excellence? <a href="#contact" data-page="contact" style="color:var(--rust)">Call or email us today.</a></p>
+        <p style="color:#777;font-size:.82rem;margin-top:.5rem">We are typically a year out, so start planning now.</p>
+      </div>
+      <div class="photo-col">
+        <img src="https://musclecarworkshop.com/wp-content/uploads/2012/04/The_shop1.jpg" alt="The Shop">
+        <div class="owner-card">
+          <h4>Darrell Roth</h4><p class="owner-role">Owner &amp; Operator</p>
+          <div class="owner-links">
+            <a href="mailto:CarCrafter@aol.com">&#9993; CarCrafter@aol.com</a>
+            <a href="tel:9706862756">&#128222; 970-686-2756</a>
+            <a>&#128205; 133 E. 4th Ave., Severance, CO 80546</a>
+          </div>
+        </div>
+        <img src="https://musclecarworkshop.com/wp-content/uploads/2012/04/complete_car11.jpg" alt="Complete Build" style="margin-top:1rem">
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="ft-logo">Severance Autobody</div><div class="ft-tag">Superior Automotive Refinishing Since 1989</div>
+    <div class="ft-links">
+      <a href="#home" data-page="home">Home</a>
+      <a href="#about" data-page="about">About</a>
+      <a href="#awards" data-page="awards">Awards</a>
+      <a href="#services" data-page="services">Services</a>
+      <a href="#portfolio" data-page="portfolio">Portfolio</a>
+      <a href="#contact" data-page="contact">Contact</a>
+    </div>
+    <div class="ft-div"></div>
+    <p class="ft-copy">&copy; 2026 Severance Autobody &nbsp;&middot;&nbsp; 133 E. 4th Ave., Severance, CO 80546 &nbsp;&middot;&nbsp; 970-686-2756</p>
+  </footer>
+</div>
+
+<div id="page-awards" class="page">
+  <div class="page-hero"><div class="hero-bg"></div><div class="page-hero-content"><h1>Awards &amp; Publications</h1><p>Recognition &middot; Press &middot; Accolades</p></div></div>
+  <div class="wrap" style="max-width:800px;text-align:center">
+    <div class="sec-hdr"><p class="sec-label">Recognition</p><h2 class="sec-title">Our <span>Achievements</span></h2><div class="divline"></div></div>
+    <div class="soon-box">
+      <h2>Coming Soon</h2>
+      <div class="orn">&#127942;</div>
+      <p>We&#39;re gathering our show wins, magazine features, and industry awards to display here. Check back soon &#8212; there&#39;s a lot to share.</p>
+      <button class="btn" style="margin-top:2rem" data-goto="portfolio">View Our Portfolio</button>
+    </div>
+  </div>
+  <footer>
+    <div class="ft-logo">Severance Autobody</div><div class="ft-tag">Superior Automotive Refinishing Since 1989</div>
+    <div class="ft-links">
+      <a href="#home" data-page="home">Home</a>
+      <a href="#about" data-page="about">About</a>
+      <a href="#awards" data-page="awards">Awards</a>
+      <a href="#services" data-page="services">Services</a>
+      <a href="#portfolio" data-page="portfolio">Portfolio</a>
+      <a href="#contact" data-page="contact">Contact</a>
+    </div>
+    <div class="ft-div"></div>
+    <p class="ft-copy">&copy; 2026 Severance Autobody &nbsp;&middot;&nbsp; 133 E. 4th Ave., Severance, CO 80546 &nbsp;&middot;&nbsp; 970-686-2756</p>
+  </footer>
+</div>
+
+<div id="page-services" class="page">
+  <div class="page-hero"><div class="hero-bg"></div><div class="page-hero-content"><h1>Our Services</h1><p>What We Build &middot; What We Do</p></div></div>
+  <div class="wrap">
+    <div class="sec-hdr"><p class="sec-label">Capabilities</p><h2 class="sec-title">Crafted to <span>Perfection</span></h2><div class="divline"></div></div>
+    <div class="srv-grid">
+      <div class="srv-card"><div class="srv-inner"><div class="srv-icon">&#127912;</div><div class="srv-num">01</div><h3>Show Quality Painting</h3><p>Expert show quality body and paint work. All vehicles stripped to bare shell and hand crafted from the metal up.</p></div></div>
+      <div class="srv-card"><div class="srv-inner"><div class="srv-icon">&#128297;</div><div class="srv-num">02</div><h3>Complete Builds</h3><p>From dream to design to completion &#8212; we work with you each step to make your vision come true, hassle free.</p></div></div>
+      <div class="srv-card"><div class="srv-inner"><div class="srv-icon">&#128295;</div><div class="srv-num">03</div><h3>Muscle Car Parts</h3><p>Authorized dealer with Classic Industries, Goodmark Industries and Auto Metal Direct for best local prices on restoration parts.</p></div></div>
+      <div class="srv-card"><div class="srv-inner"><div class="srv-icon">&#9999;&#65039;</div><div class="srv-num">04</div><h3>Concept Design</h3><p>Got an idea? We can make it a reality. From concept sketches to the finished machine &#8212; we&#39;ll develop your vision.</p></div></div>
+      <div class="srv-card"><div class="srv-inner"><div class="srv-icon">&#128260;</div><div class="srv-num">05</div><h3>Rotisserie Restoration</h3><p>Since 2005, our entire focus has been high-end rotisserie restorations &#8212; complete frame-off builds to the highest standards.</p></div></div>
+      <div class="srv-card"><div class="srv-inner"><div class="srv-icon">&#128663;</div><div class="srv-num">06</div><h3>Camaro Specialist</h3><p>Over 100 first generation Camaros completed. Nobody knows these cars like we do &#8212; unmatched expertise in Northern Colorado.</p></div></div>
+    </div>
+  </div>
+  <footer>
+    <div class="ft-logo">Severance Autobody</div><div class="ft-tag">Superior Automotive Refinishing Since 1989</div>
+    <div class="ft-links">
+      <a href="#home" data-page="home">Home</a>
+      <a href="#about" data-page="about">About</a>
+      <a href="#awards" data-page="awards">Awards</a>
+      <a href="#services" data-page="services">Services</a>
+      <a href="#portfolio" data-page="portfolio">Portfolio</a>
+      <a href="#contact" data-page="contact">Contact</a>
+    </div>
+    <div class="ft-div"></div>
+    <p class="ft-copy">&copy; 2026 Severance Autobody &nbsp;&middot;&nbsp; 133 E. 4th Ave., Severance, CO 80546 &nbsp;&middot;&nbsp; 970-686-2756</p>
+  </footer>
+</div>
+
+<div id="page-portfolio" class="page">
+  <div class="page-hero"><div class="hero-bg"></div><div class="page-hero-content"><h1>Portfolio</h1><p>Completed Builds &middot; Restorations &middot; Projects</p></div></div>
+  <div class="port-wrap">
+    <div class="sec-hdr"><p class="sec-label">Our Work</p><h2 class="sec-title">The Work <span>Speaks</span></h2><div class="divline"></div></div>
+    <div id="admin-bar" class="admin-bar" style="display:none">
+      <span>&#128295; Portfolio Manager &#8212; hover a card to Edit or Delete</span>
+      <button class="admin-btn" id="add-photo-btn">+ Add Photo</button>
+    </div>
+    <div class="port-controls">
+      <div class="filter-tabs" id="filter-tabs">
+        <button class="ftab active" data-filter="all">All</button>
+        <button class="ftab" data-filter="Camaro">Camaro</button>
+        <button class="ftab" data-filter="Chevrolet">Chevrolet</button>
+        <button class="ftab" data-filter="Dodge">Dodge</button>
+        <button class="ftab" data-filter="Ford">Ford</button>
+        <button class="ftab" data-filter="Mustang">Mustang</button>
+        <button class="ftab" data-filter="Other">Other</button>
+      </div>
+      <button class="btn btn-sm" id="manage-btn">&#9881; Manage Photos</button>
+    </div>
+    <div id="portfolio-grid" class="port-grid"><div class="loading">Loading Portfolio...</div></div>
+  </div>
+  <footer>
+    <div class="ft-logo">Severance Autobody</div><div class="ft-tag">Superior Automotive Refinishing Since 1989</div>
+    <div class="ft-links">
+      <a href="#home" data-page="home">Home</a>
+      <a href="#about" data-page="about">About</a>
+      <a href="#awards" data-page="awards">Awards</a>
+      <a href="#services" data-page="services">Services</a>
+      <a href="#portfolio" data-page="portfolio">Portfolio</a>
+      <a href="#contact" data-page="contact">Contact</a>
+    </div>
+    <div class="ft-div"></div>
+    <p class="ft-copy">&copy; 2026 Severance Autobody &nbsp;&middot;&nbsp; 133 E. 4th Ave., Severance, CO 80546 &nbsp;&middot;&nbsp; 970-686-2756</p>
+  </footer>
+</div>
+
+<div id="page-contact" class="page">
+  <div class="page-hero"><div class="hero-bg"></div><div class="page-hero-content"><h1>Get In Touch</h1><p>Let&#39;s Build Your Dream</p></div></div>
+  <div class="wrap">
+    <div class="con-grid">
+      <div class="con-info">
+        <h2>Let&#39;s Build Your <em>Dream</em></h2>
+        <p>Whether you&#39;ve got a clear vision or just a rough idea, we&#39;d love to hear about your project. We&#39;re typically booked a year out, so reach out early.</p>
+        <div class="con-detail"><div class="c-icon">&#128222;</div><div><p class="c-lbl">Phone</p><p class="c-val"><a href="tel:9706862756">970-686-2756</a></p></div></div>
+        <div class="con-detail"><div class="c-icon">&#9993;</div><div><p class="c-lbl">Email</p><p class="c-val"><a href="mailto:CarCrafter@aol.com">CarCrafter@aol.com</a></p></div></div>
+        <div class="con-detail"><div class="c-icon">&#128205;</div><div><p class="c-lbl">Address</p><p class="c-val">133 E. 4th Ave.<br>Severance, Colorado 80546</p></div></div>
+        <div class="con-detail"><div class="c-icon">&#128336;</div><div><p class="c-lbl">Hours</p><p class="c-val">By Appointment</p></div></div>
+      </div>
+      <div class="con-form">
+        <h3>Send Us a Message</h3>
+        <div id="form-ok" class="form-ok">&#10003; Message sent! We&#39;ll be in touch soon.</div>
+        <div class="fg"><label for="c-name">Your Name</label><input type="text" id="c-name" placeholder="Full Name"></div>
+        <div class="fg"><label for="c-email">Email Address</label><input type="email" id="c-email" placeholder="your@email.com"></div>
+        <div class="fg"><label for="c-phone">Phone (Optional)</label><input type="tel" id="c-phone" placeholder="(970) 555-0000"></div>
+        <div class="fg"><label for="c-msg">Tell Us About Your Project</label><textarea id="c-msg" placeholder="Year, make, model &#8212; what are you dreaming up?"></textarea></div>
+        <button class="btn" id="contact-submit-btn" style="width:100%">Send Message</button>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="ft-logo">Severance Autobody</div><div class="ft-tag">Superior Automotive Refinishing Since 1989</div>
+    <div class="ft-links">
+      <a href="#home" data-page="home">Home</a>
+      <a href="#about" data-page="about">About</a>
+      <a href="#awards" data-page="awards">Awards</a>
+      <a href="#services" data-page="services">Services</a>
+      <a href="#portfolio" data-page="portfolio">Portfolio</a>
+      <a href="#contact" data-page="contact">Contact</a>
+    </div>
+    <div class="ft-div"></div>
+    <p class="ft-copy">&copy; 2026 Severance Autobody &nbsp;&middot;&nbsp; 133 E. 4th Ave., Severance, CO 80546 &nbsp;&middot;&nbsp; 970-686-2756</p>
+  </footer>
+</div>
+
+<div class="modal-ov" id="photo-modal">
+  <div class="modal">
+    <div class="modal-hdr"><h3 id="modal-title">Add Photo</h3><button class="modal-x" id="modal-close-btn">&#215;</button></div>
+    <div class="modal-body">
+      <div class="fg"><label for="f-title">Title *</label><input type="text" id="f-title" placeholder="e.g. 1969 Camaro SS 396"></div>
+      <div class="frow">
+        <div class="fg"><label for="f-cat">Category</label><select id="f-cat"><option>Camaro</option><option>Chevrolet</option><option>Dodge</option><option>Ford</option><option>Mustang</option><option>Other</option></select></div>
+        <div class="fg"><label for="f-year">Year Built</label><input type="text" id="f-year" placeholder="2024"></div>
+      </div>
+      <div class="fg"><label for="f-img">Image URL</label><input type="url" id="f-img" placeholder="https://..."><img id="img-prev" class="img-prev" style="display:none" src="" alt=""></div>
+      <div class="fg"><label for="f-desc">Description</label><textarea id="f-desc" placeholder="Brief description..."></textarea></div>
+      <div class="frow">
+        <div class="fg"><label for="f-sort">Sort Order</label><input type="number" id="f-sort" placeholder="1, 2, 3..."></div>
+        <div class="fg" style="display:flex;align-items:flex-end"><div class="cbrow"><input type="checkbox" id="f-feat"><label for="f-feat">Featured</label></div></div>
+      </div>
+    </div>
+    <div class="modal-ftr">
+      <button class="btn-cancel" id="modal-cancel-btn">Cancel</button>
+      <button class="btn-save" id="modal-save-btn">Save Photo</button>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-x" id="lb-close-btn">&#215;</button>
+  <img id="lb-img" src="" alt="">
+  <div class="lb-info"><h3 id="lb-title"></h3><p id="lb-desc"></p></div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script>(function(){
+'use strict';
+var BASE=(window.location.origin+window.location.pathname).replace(//+$/,'');
+var photos=[],activeFilter='all',adminOn=false,editId=null;
+
+function showPage(page){
+  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
+  var el=document.getElementById('page-'+page);
+  if(!el)return;
+  el.classList.add('active');
+  document.querySelectorAll('a[data-page]').forEach(function(a){a.classList.toggle('active',a.getAttribute('data-page')===page);});
+  window.scrollTo(0,0);
+  var m=document.getElementById('nav-menu');
+  if(m)m.classList.remove('open');
+  if(page==='portfolio')loadPortfolio();
+}
+
+document.addEventListener('click',function(e){
+  var n=e.target.closest('a[data-page]');
+  if(n){e.preventDefault();showPage(n.getAttribute('data-page'));return;}
+  var g=e.target.closest('[data-goto]');
+  if(g){e.preventDefault();showPage(g.getAttribute('data-goto'));return;}
+});
+
+var lb=document.getElementById('logo-btn');
+if(lb)lb.addEventListener('click',function(){showPage('home');});
+var hb=document.getElementById('hamburger-btn');
+if(hb)hb.addEventListener('click',function(){document.getElementById('nav-menu').classList.toggle('open');});
+
+function loadPortfolio(){
+  var grid=document.getElementById('portfolio-grid');
+  if(!grid)return;
+  grid.innerHTML='<div class="loading">Loading Portfolio...</div>';
+  fetch(BASE+'/photos')
+    .then(function(r){return r.json();})
+    .then(function(d){photos=d.photos||[];renderGrid();})
+    .catch(function(){grid.innerHTML='<div class="empty"><h3>Could not load portfolio</h3><p>Please try again.</p></div>';});
+}
+
+function esc(s){return(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+function renderGrid(){
+  var grid=document.getElementById('portfolio-grid');
+  if(!grid)return;
+  var list=activeFilter==='all'?photos:photos.filter(function(p){return p.category===activeFilter;});
+  list=list.slice().sort(function(a,b){return(a.sort_order||999)-(b.sort_order||999);});
+  if(!list.length){grid.innerHTML='<div class="empty"><h3>No photos found</h3><p>Try a different filter.</p></div>';return;}
+  grid.innerHTML=list.map(function(p){
+    return '<div class="pcard" data-id="'+esc(p.id)+'">'
+      +(p.is_featured?'<div class="pbadge">Featured</div>':'')
+      +'<img src="'+esc(p.image_url||'')+'" alt="'+esc(p.title)+'" data-lb-src="'+esc(p.image_url||'')+'" data-lb-title="'+esc(p.title)+'" data-lb-desc="'+esc(p.description||'')+'">'
+      +(adminOn?'<div class="edit-ov"><button class="edbtn edit-card-btn" data-id="'+esc(p.id)+'">Edit</button><button class="edbtn del del-card-btn" data-id="'+esc(p.id)+'">Delete</button></div>':'')
+      +'<div class="pcard-info"><h3>'+esc(p.title)+'</h3>'+(p.description?'<p>'+esc(p.description)+'</p>':'')+'<span class="cat-tag">'+esc(p.category||'Other')+'</span></div>'
+      +'</div>';
+  }).join('');
+  grid.querySelectorAll('img[data-lb-src]').forEach(function(img){
+    img.addEventListener('click',function(){openLB(img.getAttribute('data-lb-src'),img.getAttribute('data-lb-title'),img.getAttribute('data-lb-desc'));});
+    img.addEventListener('error',function(){img.src='https://placehold.co/400x200/1a1a1a/555?text=No+Image';});
+  });
+  grid.querySelectorAll('.edit-card-btn').forEach(function(btn){btn.addEventListener('click',function(e){e.stopPropagation();openEdit(btn.getAttribute('data-id'));});});
+  grid.querySelectorAll('.del-card-btn').forEach(function(btn){btn.addEventListener('click',function(e){e.stopPropagation();delPhoto(btn.getAttribute('data-id'));});});
+}
+
+var ft=document.getElementById('filter-tabs');
+if(ft){ft.addEventListener('click',function(e){var b=e.target.closest('.ftab');if(!b)return;activeFilter=b.getAttribute('data-filter');ft.querySelectorAll('.ftab').forEach(function(t){t.classList.remove('active');});b.classList.add('active');renderGrid();});}
+
+var mb=document.getElementById('manage-btn');
+if(mb)mb.addEventListener('click',function(){adminOn=!adminOn;var bar=document.getElementById('admin-bar');if(bar)bar.style.display=adminOn?'flex':'none';renderGrid();showToast(adminOn?'Admin mode on':'Admin mode off');});
+var apb=document.getElementById('add-photo-btn');
+if(apb)apb.addEventListener('click',openAddModal);
+
+function openAddModal(){
+  editId=null;
+  document.getElementById('modal-title').textContent='Add Photo';
+  ['f-title','f-img','f-desc','f-year','f-sort'].forEach(function(id){document.getElementById(id).value='';});
+  document.getElementById('f-cat').value='Camaro';
+  document.getElementById('f-feat').checked=false;
+  document.getElementById('img-prev').style.display='none';
+  document.getElementById('photo-modal').classList.add('open');
+}
+
+function openEdit(id){
+  var p=photos.find(function(x){return x.id===id;});
+  if(!p)return;
+  editId=id;
+  document.getElementById('modal-title').textContent='Edit Photo';
+  document.getElementById('f-title').value=p.title||'';
+  document.getElementById('f-cat').value=p.category||'Other';
+  document.getElementById('f-year').value=p.year_built||'';
+  document.getElementById('f-img').value=p.image_url||'';
+  document.getElementById('f-desc').value=p.description||'';
+  document.getElementById('f-sort').value=p.sort_order||'';
+  document.getElementById('f-feat').checked=!!p.is_featured;
+  updateImgPreview();
+  document.getElementById('photo-modal').classList.add('open');
+}
+
+function closeModal(){document.getElementById('photo-modal').classList.remove('open');}
+document.getElementById('modal-close-btn').addEventListener('click',closeModal);
+document.getElementById('modal-cancel-btn').addEventListener('click',closeModal);
+document.getElementById('photo-modal').addEventListener('click',function(e){if(e.target===this)closeModal();});
+var fi=document.getElementById('f-img');
+if(fi)fi.addEventListener('input',updateImgPreview);
+function updateImgPreview(){var url=document.getElementById('f-img').value;var prev=document.getElementById('img-prev');if(url){prev.src=url;prev.style.display='block';}else{prev.style.display='none';}}
+
+document.getElementById('modal-save-btn').addEventListener('click',function(){
+  var title=document.getElementById('f-title').value.trim();
+  if(!title){showToast('Please enter a title');return;}
+  var payload={title:title,category:document.getElementById('f-cat').value,year_built:document.getElementById('f-year').value,image_url:document.getElementById('f-img').value,description:document.getElementById('f-desc').value,sort_order:parseInt(document.getElementById('f-sort').value)||999,is_featured:document.getElementById('f-feat').checked};
+  var url=editId?BASE+'/photos/'+editId:BASE+'/photos';
+  var method=editId?'PUT':'POST';
+  fetch(url,{method:method,headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+    .then(function(r){return r.json();})
+    .then(function(d){if(d.error)throw new Error(d.error);showToast(editId?'Photo updated!':'Photo added!');closeModal();loadPortfolio();})
+    .catch(function(e){showToast('Error: '+e.message);});
+});
+
+function delPhoto(id){
+  if(!confirm('Delete this photo?'))return;
+  fetch(BASE+'/photos/'+id,{method:'DELETE'}).then(function(r){return r.json();}).then(function(d){if(d.error)throw new Error(d.error);showToast('Photo deleted');loadPortfolio();}).catch(function(e){showToast('Error: '+e.message);});
+}
+
+function openLB(src,title,desc){if(!src)return;document.getElementById('lb-img').src=src;document.getElementById('lb-title').textContent=title;document.getElementById('lb-desc').textContent=desc;document.getElementById('lightbox').classList.add('open');}
+function closeLB(){document.getElementById('lightbox').classList.remove('open');}
+document.getElementById('lb-close-btn').addEventListener('click',closeLB);
+document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this)closeLB();});
+
+document.getElementById('contact-submit-btn').addEventListener('click',function(){
+  var n=document.getElementById('c-name').value.trim();
+  var em=document.getElementById('c-email').value.trim();
+  var m=document.getElementById('c-msg').value.trim();
+  if(!n||!em||!m){showToast('Please fill in all required fields');return;}
+  document.getElementById('form-ok').style.display='block';
+  ['c-name','c-email','c-phone','c-msg'].forEach(function(id){document.getElementById(id).value='';});
+  showToast('Message sent!');
+});
+
+function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},3000);}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeModal();closeLB();}});
+
+var hash=window.location.hash.replace('#','');
+var pages=['home','about','awards','services','portfolio','contact'];
+if(hash&&pages.indexOf(hash)!==-1)showPage(hash);
+})();</script>
+</body>
+</html>
