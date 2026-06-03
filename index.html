@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Severance Autobody — Since 1989</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
-<style>:root{--cream:#F5E6C8;--rust:#C0392B;--deep:#8B0000;--gold:#D4AC0D;--chrome:#B8BCC2;--dark:#1A1A1A;--coal:#2C2C2C;}
+<style>
+:root{--cream:#F5E6C8;--rust:#C0392B;--deep:#8B0000;--gold:#D4AC0D;--chrome:#B8BCC2;--dark:#1A1A1A;--coal:#2C2C2C;}
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Oswald',sans-serif;background:var(--dark);color:var(--cream);min-height:100vh;}
 header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(26,26,26,.97);border-bottom:3px solid var(--rust);box-shadow:0 2px 20px rgba(0,0,0,.8);}
@@ -109,7 +110,7 @@ nav a:hover,nav a.active{color:var(--cream);background:var(--rust);}
 .edit-ov{position:absolute;inset:0;background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;gap:.5rem;z-index:5;}
 .pcard:hover .edit-ov{display:flex;}
 .edbtn{background:var(--dark);border:1px solid var(--cream);color:var(--cream);padding:.38rem .75rem;font-family:'Oswald',sans-serif;font-size:.68rem;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .2s;}
-.edbtn:hover,.edbtn.del:hover{background:var(--rust);border-color:var(--rust);}
+.edbtn:hover{background:var(--rust);border-color:var(--rust);}
 .con-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start;}
 .con-info h2{font-family:'Playfair Display',serif;font-size:1.9rem;color:var(--cream);margin-bottom:.9rem;}
 .con-info h2 em{color:var(--rust);}
@@ -177,7 +178,8 @@ nav a{font-size:.88rem;padding:.7rem 1rem;}
 .photo-col{position:static;}
 .stats-row{grid-template-columns:1fr;}
 .frow{grid-template-columns:1fr;}
-}</style>
+}
+</style>
 </head>
 <body>
 
@@ -201,6 +203,7 @@ nav a{font-size:.88rem;padding:.7rem 1rem;}
   </div>
 </header>
 
+<!-- HOME -->
 <div id="page-home" class="page active">
   <section class="hero">
     <div class="hero-bg"></div>
@@ -219,27 +222,16 @@ nav a{font-size:.88rem;padding:.7rem 1rem;}
   <section class="home-features">
     <div class="sec-hdr"><p class="sec-label">What We Do</p><h2 class="sec-title">Built With <span>Passion</span></h2><div class="divline"></div></div>
     <div class="feat-grid">
-      <div class="feat-card"><div class="feat-icon">&#127912;</div><h3>Show Quality Paint</h3><p>Expert body and paint work is our specialty. Fit, finish, and attention to detail is never overlooked. All vehicles stripped to bare metal and hand crafted from the ground up.</p></div>
-      <div class="feat-card"><div class="feat-icon">&#128297;</div><h3>Complete Builds</h3><p>From dream, to design, to completion &#8212; we work with you every step to make your dream a reality, hassle free, for a truly satisfying experience.</p></div>
-      <div class="feat-card"><div class="feat-icon">&#127937;</div><h3>100+ Camaros Built</h3><p>First generation Camaro specialists with over 100 completed builds. No one knows these cars better &#8212; building them since 1989.</p></div>
+      <div class="feat-card"><div class="feat-icon">&#127912;</div><h3>Show Quality Paint</h3><p>Expert body and paint work is our specialty. All vehicles stripped to bare metal and hand crafted from the ground up.</p></div>
+      <div class="feat-card"><div class="feat-icon">&#128297;</div><h3>Complete Builds</h3><p>From dream to design to completion &#8212; we work with you every step to make your dream a reality, hassle free.</p></div>
+      <div class="feat-card"><div class="feat-icon">&#127937;</div><h3>100+ Camaros Built</h3><p>First generation Camaro specialists with over 100 completed builds. No one knows these cars better.</p></div>
       <div class="feat-card"><div class="feat-icon">&#128295;</div><h3>Muscle Car Parts</h3><p>Authorized dealer with Classic Industries, Goodmark Industries and Auto Metal Direct for the best local prices on your build.</p></div>
     </div>
   </section>
-  <footer>
-    <div class="ft-logo">Severance Autobody</div><div class="ft-tag">Superior Automotive Refinishing Since 1989</div>
-    <div class="ft-links">
-      <a href="#home" data-page="home">Home</a>
-      <a href="#about" data-page="about">About</a>
-      <a href="#awards" data-page="awards">Awards</a>
-      <a href="#services" data-page="services">Services</a>
-      <a href="#portfolio" data-page="portfolio">Portfolio</a>
-      <a href="#contact" data-page="contact">Contact</a>
-    </div>
-    <div class="ft-div"></div>
-    <p class="ft-copy">&copy; 2026 Severance Autobody &nbsp;&middot;&nbsp; 133 E. 4th Ave., Severance, CO 80546 &nbsp;&middot;&nbsp; 970-686-2756</p>
-  </footer>
+  <footer><div class="ft-logo">Severance Autobody</div><div class="ft-tag">Superior Automotive Refinishing Since 1989</div><div class="ft-links"><a href="#home" data-page="home">Home</a><a href="#about" data-page="about">About</a><a href="#awards" data-page="awards">Awards</a><a href="#services" data-page="services">Services</a><a href="#portfolio" data-page="portfolio">Portfolio</a><a href="#contact" data-page="contact">Contact</a></div><div class="ft-div"></div><p class="ft-copy">&copy; 2026 Severance Autobody &nbsp;&middot;&nbsp; 133 E. 4th Ave., Severance, CO 80546 &nbsp;&middot;&nbsp; 970-686-2756</p></footer>
 </div>
 
+<!-- ABOUT -->
 <div id="page-about" class="page">
   <div class="page-hero"><div class="hero-bg"></div><div class="page-hero-content"><h1>Our Story</h1><p>History &middot; Purpose &middot; Vision</p></div></div>
   <div class="wrap">
@@ -251,7 +243,7 @@ nav a{font-size:.88rem;padding:.7rem 1rem;}
     <div class="about-grid">
       <div class="about-text">
         <h2>Roots in the <em>1960s</em></h2>
-        <p>Our roots go back to the 1960s when my Dad purchased and operated Severance Garage. His focus was mechanic work, then later introduced paint and body work to his business operations.</p>
+        <p>Our roots go back to the 1960s when my Dad purchased and operated Severance Garage. His focus was mechanic work, then later introduced paint and body work.</p>
         <p>He has always been a car enthusiast since the 50s &#8212; when he purchased his first new car, a 1957 Chevy 2-door hardtop, black with red interior. His passion was transferred to me as I grew up around the business.</p>
         <div class="quote-block"><p>&#8220;A strong desire to build muscle cars developed &#8212; and it never left.&#8221;</p></div>
         <p>Early experiences with Hot Wheels and plastic model builds fueled my desire for the real thing. A 1971 Rally Sport Z/28 Camaro was the first build I was involved with in 1980. My first personal car &#8212; a 1968 Firebird 400 &#8212; was restored in 1981.</p>
@@ -274,21 +266,10 @@ nav a{font-size:.88rem;padding:.7rem 1rem;}
       </div>
     </div>
   </div>
-  <footer>
-    <div class="ft-logo">Severance Autobody</div><div class="ft-tag">Superior Automotive Refinishing Since 1989</div>
-    <div class="ft-links">
-      <a href="#home" data-page="home">Home</a>
-      <a href="#about" data-page="about">About</a>
-      <a href="#awards" data-page="awards">Awards</a>
-      <a href="#services" data-page="services">Services</a>
-      <a href="#portfolio" data-page="portfolio">Portfolio</a>
-      <a href="#contact" data-page="contact">Contact</a>
-    </div>
-    <div class="ft-div"></div>
-    <p class="ft-copy">&copy; 2026 Severance Autobody &nbsp;&middot;&nbsp; 133 E. 4th Ave., Severance, CO 80546 &nbsp;&middot;&nbsp; 970-686-2756</p>
-  </footer>
+  <footer><div class="ft-logo">Severance Autobody</div><div class="ft-tag">Superior Automotive Refinishing Since 1989</div><div class="ft-links"><a href="#home" data-page="home">Home</a><a href="#about" data-page="about">About</a><a href="#awards" data-page="awards">Awards</a><a href="#services" data-page="services">Services</a><a href="#portfolio" data-page="portfolio">Portfolio</a><a href="#contact" data-page="contact">Contact</a></div><div class="ft-div"></div><p class="ft-copy">&copy; 2026 Severance Autobody &nbsp;&middot;&nbsp; 133 E. 4th Ave., Severance, CO 80546 &nbsp;&middot;&nbsp; 970-686-2756</p></footer>
 </div>
 
+<!-- AWARDS -->
 <div id="page-awards" class="page">
   <div class="page-hero"><div class="hero-bg"></div><div class="page-hero-content"><h1>Awards &amp; Publications</h1><p>Recognition &middot; Press &middot; Accolades</p></div></div>
   <div class="wrap" style="max-width:800px;text-align:center">
@@ -296,59 +277,37 @@ nav a{font-size:.88rem;padding:.7rem 1rem;}
     <div class="soon-box">
       <h2>Coming Soon</h2>
       <div class="orn">&#127942;</div>
-      <p>We&#39;re gathering our show wins, magazine features, and industry awards to display here. Check back soon &#8212; there&#39;s a lot to share.</p>
+      <p>We&#39;re gathering our show wins, magazine features, and industry awards. Check back soon.</p>
       <button class="btn" style="margin-top:2rem" data-goto="portfolio">View Our Portfolio</button>
     </div>
   </div>
-  <footer>
-    <div class="ft-logo">Severance Autobody</div><div class="ft-tag">Superior Automotive Refinishing Since 1989</div>
-    <div class="ft-links">
-      <a href="#home" data-page="home">Home</a>
-      <a href="#about" data-page="about">About</a>
-      <a href="#awards" data-page="awards">Awards</a>
-      <a href="#services" data-page="services">Services</a>
-      <a href="#portfolio" data-page="portfolio">Portfolio</a>
-      <a href="#contact" data-page="contact">Contact</a>
-    </div>
-    <div class="ft-div"></div>
-    <p class="ft-copy">&copy; 2026 Severance Autobody &nbsp;&middot;&nbsp; 133 E. 4th Ave., Severance, CO 80546 &nbsp;&middot;&nbsp; 970-686-2756</p>
-  </footer>
+  <footer><div class="ft-logo">Severance Autobody</div><div class="ft-tag">Superior Automotive Refinishing Since 1989</div><div class="ft-links"><a href="#home" data-page="home">Home</a><a href="#about" data-page="about">About</a><a href="#awards" data-page="awards">Awards</a><a href="#services" data-page="services">Services</a><a href="#portfolio" data-page="portfolio">Portfolio</a><a href="#contact" data-page="contact">Contact</a></div><div class="ft-div"></div><p class="ft-copy">&copy; 2026 Severance Autobody &nbsp;&middot;&nbsp; 133 E. 4th Ave., Severance, CO 80546 &nbsp;&middot;&nbsp; 970-686-2756</p></footer>
 </div>
 
+<!-- SERVICES -->
 <div id="page-services" class="page">
   <div class="page-hero"><div class="hero-bg"></div><div class="page-hero-content"><h1>Our Services</h1><p>What We Build &middot; What We Do</p></div></div>
   <div class="wrap">
     <div class="sec-hdr"><p class="sec-label">Capabilities</p><h2 class="sec-title">Crafted to <span>Perfection</span></h2><div class="divline"></div></div>
     <div class="srv-grid">
       <div class="srv-card"><div class="srv-inner"><div class="srv-icon">&#127912;</div><div class="srv-num">01</div><h3>Show Quality Painting</h3><p>Expert show quality body and paint work. All vehicles stripped to bare shell and hand crafted from the metal up.</p></div></div>
-      <div class="srv-card"><div class="srv-inner"><div class="srv-icon">&#128297;</div><div class="srv-num">02</div><h3>Complete Builds</h3><p>From dream to design to completion &#8212; we work with you each step to make your vision come true, hassle free.</p></div></div>
-      <div class="srv-card"><div class="srv-inner"><div class="srv-icon">&#128295;</div><div class="srv-num">03</div><h3>Muscle Car Parts</h3><p>Authorized dealer with Classic Industries, Goodmark Industries and Auto Metal Direct for best local prices on restoration parts.</p></div></div>
-      <div class="srv-card"><div class="srv-inner"><div class="srv-icon">&#9999;&#65039;</div><div class="srv-num">04</div><h3>Concept Design</h3><p>Got an idea? We can make it a reality. From concept sketches to the finished machine &#8212; we&#39;ll develop your vision.</p></div></div>
-      <div class="srv-card"><div class="srv-inner"><div class="srv-icon">&#128260;</div><div class="srv-num">05</div><h3>Rotisserie Restoration</h3><p>Since 2005, our entire focus has been high-end rotisserie restorations &#8212; complete frame-off builds to the highest standards.</p></div></div>
-      <div class="srv-card"><div class="srv-inner"><div class="srv-icon">&#128663;</div><div class="srv-num">06</div><h3>Camaro Specialist</h3><p>Over 100 first generation Camaros completed. Nobody knows these cars like we do &#8212; unmatched expertise in Northern Colorado.</p></div></div>
+      <div class="srv-card"><div class="srv-inner"><div class="srv-icon">&#128297;</div><div class="srv-num">02</div><h3>Complete Builds</h3><p>From dream to design to completion &#8212; we work with you each step, hassle free.</p></div></div>
+      <div class="srv-card"><div class="srv-inner"><div class="srv-icon">&#128295;</div><div class="srv-num">03</div><h3>Muscle Car Parts</h3><p>Authorized dealer with Classic Industries, Goodmark and Auto Metal Direct. Best local prices on restoration parts.</p></div></div>
+      <div class="srv-card"><div class="srv-inner"><div class="srv-icon">&#9999;&#65039;</div><div class="srv-num">04</div><h3>Concept Design</h3><p>From concept sketches to the finished machine &#8212; we&#39;ll develop your vision into reality.</p></div></div>
+      <div class="srv-card"><div class="srv-inner"><div class="srv-icon">&#128260;</div><div class="srv-num">05</div><h3>Rotisserie Restoration</h3><p>Since 2005, exclusively high-end rotisserie restorations &#8212; complete frame-off builds to the highest standards.</p></div></div>
+      <div class="srv-card"><div class="srv-inner"><div class="srv-icon">&#128663;</div><div class="srv-num">06</div><h3>Camaro Specialist</h3><p>Over 100 first generation Camaros completed. Unmatched expertise in Northern Colorado.</p></div></div>
     </div>
   </div>
-  <footer>
-    <div class="ft-logo">Severance Autobody</div><div class="ft-tag">Superior Automotive Refinishing Since 1989</div>
-    <div class="ft-links">
-      <a href="#home" data-page="home">Home</a>
-      <a href="#about" data-page="about">About</a>
-      <a href="#awards" data-page="awards">Awards</a>
-      <a href="#services" data-page="services">Services</a>
-      <a href="#portfolio" data-page="portfolio">Portfolio</a>
-      <a href="#contact" data-page="contact">Contact</a>
-    </div>
-    <div class="ft-div"></div>
-    <p class="ft-copy">&copy; 2026 Severance Autobody &nbsp;&middot;&nbsp; 133 E. 4th Ave., Severance, CO 80546 &nbsp;&middot;&nbsp; 970-686-2756</p>
-  </footer>
+  <footer><div class="ft-logo">Severance Autobody</div><div class="ft-tag">Superior Automotive Refinishing Since 1989</div><div class="ft-links"><a href="#home" data-page="home">Home</a><a href="#about" data-page="about">About</a><a href="#awards" data-page="awards">Awards</a><a href="#services" data-page="services">Services</a><a href="#portfolio" data-page="portfolio">Portfolio</a><a href="#contact" data-page="contact">Contact</a></div><div class="ft-div"></div><p class="ft-copy">&copy; 2026 Severance Autobody &nbsp;&middot;&nbsp; 133 E. 4th Ave., Severance, CO 80546 &nbsp;&middot;&nbsp; 970-686-2756</p></footer>
 </div>
 
+<!-- PORTFOLIO -->
 <div id="page-portfolio" class="page">
   <div class="page-hero"><div class="hero-bg"></div><div class="page-hero-content"><h1>Portfolio</h1><p>Completed Builds &middot; Restorations &middot; Projects</p></div></div>
   <div class="port-wrap">
     <div class="sec-hdr"><p class="sec-label">Our Work</p><h2 class="sec-title">The Work <span>Speaks</span></h2><div class="divline"></div></div>
     <div id="admin-bar" class="admin-bar" style="display:none">
-      <span>&#128295; Portfolio Manager &#8212; hover a card to Edit or Delete</span>
+      <span>&#128295; Admin Mode &#8212; hover a card to Edit or Delete</span>
       <button class="admin-btn" id="add-photo-btn">+ Add Photo</button>
     </div>
     <div class="port-controls">
@@ -365,21 +324,10 @@ nav a{font-size:.88rem;padding:.7rem 1rem;}
     </div>
     <div id="portfolio-grid" class="port-grid"><div class="loading">Loading Portfolio...</div></div>
   </div>
-  <footer>
-    <div class="ft-logo">Severance Autobody</div><div class="ft-tag">Superior Automotive Refinishing Since 1989</div>
-    <div class="ft-links">
-      <a href="#home" data-page="home">Home</a>
-      <a href="#about" data-page="about">About</a>
-      <a href="#awards" data-page="awards">Awards</a>
-      <a href="#services" data-page="services">Services</a>
-      <a href="#portfolio" data-page="portfolio">Portfolio</a>
-      <a href="#contact" data-page="contact">Contact</a>
-    </div>
-    <div class="ft-div"></div>
-    <p class="ft-copy">&copy; 2026 Severance Autobody &nbsp;&middot;&nbsp; 133 E. 4th Ave., Severance, CO 80546 &nbsp;&middot;&nbsp; 970-686-2756</p>
-  </footer>
+  <footer><div class="ft-logo">Severance Autobody</div><div class="ft-tag">Superior Automotive Refinishing Since 1989</div><div class="ft-links"><a href="#home" data-page="home">Home</a><a href="#about" data-page="about">About</a><a href="#awards" data-page="awards">Awards</a><a href="#services" data-page="services">Services</a><a href="#portfolio" data-page="portfolio">Portfolio</a><a href="#contact" data-page="contact">Contact</a></div><div class="ft-div"></div><p class="ft-copy">&copy; 2026 Severance Autobody &nbsp;&middot;&nbsp; 133 E. 4th Ave., Severance, CO 80546 &nbsp;&middot;&nbsp; 970-686-2756</p></footer>
 </div>
 
+<!-- CONTACT -->
 <div id="page-contact" class="page">
   <div class="page-hero"><div class="hero-bg"></div><div class="page-hero-content"><h1>Get In Touch</h1><p>Let&#39;s Build Your Dream</p></div></div>
   <div class="wrap">
@@ -403,21 +351,10 @@ nav a{font-size:.88rem;padding:.7rem 1rem;}
       </div>
     </div>
   </div>
-  <footer>
-    <div class="ft-logo">Severance Autobody</div><div class="ft-tag">Superior Automotive Refinishing Since 1989</div>
-    <div class="ft-links">
-      <a href="#home" data-page="home">Home</a>
-      <a href="#about" data-page="about">About</a>
-      <a href="#awards" data-page="awards">Awards</a>
-      <a href="#services" data-page="services">Services</a>
-      <a href="#portfolio" data-page="portfolio">Portfolio</a>
-      <a href="#contact" data-page="contact">Contact</a>
-    </div>
-    <div class="ft-div"></div>
-    <p class="ft-copy">&copy; 2026 Severance Autobody &nbsp;&middot;&nbsp; 133 E. 4th Ave., Severance, CO 80546 &nbsp;&middot;&nbsp; 970-686-2756</p>
-  </footer>
+  <footer><div class="ft-logo">Severance Autobody</div><div class="ft-tag">Superior Automotive Refinishing Since 1989</div><div class="ft-links"><a href="#home" data-page="home">Home</a><a href="#about" data-page="about">About</a><a href="#awards" data-page="awards">Awards</a><a href="#services" data-page="services">Services</a><a href="#portfolio" data-page="portfolio">Portfolio</a><a href="#contact" data-page="contact">Contact</a></div><div class="ft-div"></div><p class="ft-copy">&copy; 2026 Severance Autobody &nbsp;&middot;&nbsp; 133 E. 4th Ave., Severance, CO 80546 &nbsp;&middot;&nbsp; 970-686-2756</p></footer>
 </div>
 
+<!-- MODAL -->
 <div class="modal-ov" id="photo-modal">
   <div class="modal">
     <div class="modal-hdr"><h3 id="modal-title">Add Photo</h3><button class="modal-x" id="modal-close-btn">&#215;</button></div>
@@ -441,6 +378,7 @@ nav a{font-size:.88rem;padding:.7rem 1rem;}
   </div>
 </div>
 
+<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
   <button class="lb-x" id="lb-close-btn">&#215;</button>
   <img id="lb-img" src="" alt="">
@@ -448,149 +386,204 @@ nav a{font-size:.88rem;padding:.7rem 1rem;}
 </div>
 
 <div class="toast" id="toast"></div>
-<script>(function(){
-'use strict';
-var BASE=(window.location.origin+window.location.pathname).replace(//+$/,'');
-var photos=[],activeFilter='all',adminOn=false,editId=null;
 
-function showPage(page){
-  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
-  var el=document.getElementById('page-'+page);
-  if(!el)return;
-  el.classList.add('active');
-  document.querySelectorAll('a[data-page]').forEach(function(a){a.classList.toggle('active',a.getAttribute('data-page')===page);});
-  window.scrollTo(0,0);
-  var m=document.getElementById('nav-menu');
-  if(m)m.classList.remove('open');
-  if(page==='portfolio')loadPortfolio();
-}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  'use strict';
 
-document.addEventListener('click',function(e){
-  var n=e.target.closest('a[data-page]');
-  if(n){e.preventDefault();showPage(n.getAttribute('data-page'));return;}
-  var g=e.target.closest('[data-goto]');
-  if(g){e.preventDefault();showPage(g.getAttribute('data-goto'));return;}
-});
+  var API_BASE = 'https://superagent-5c575e62.base44.app/functions/website';
+  var photos = [], activeFilter = 'all', adminOn = false, editId = null;
 
-var lb=document.getElementById('logo-btn');
-if(lb)lb.addEventListener('click',function(){showPage('home');});
-var hb=document.getElementById('hamburger-btn');
-if(hb)hb.addEventListener('click',function(){document.getElementById('nav-menu').classList.toggle('open');});
+  function showPage(page) {
+    document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
+    var el = document.getElementById('page-' + page);
+    if (!el) return;
+    el.classList.add('active');
+    document.querySelectorAll('a[data-page]').forEach(function(a) {
+      a.classList.toggle('active', a.getAttribute('data-page') === page);
+    });
+    window.scrollTo(0, 0);
+    var m = document.getElementById('nav-menu');
+    if (m) m.classList.remove('open');
+    if (page === 'portfolio') loadPortfolio();
+  }
 
-function loadPortfolio(){
-  var grid=document.getElementById('portfolio-grid');
-  if(!grid)return;
-  grid.innerHTML='<div class="loading">Loading Portfolio...</div>';
-  fetch(BASE+'/photos')
-    .then(function(r){return r.json();})
-    .then(function(d){photos=d.photos||[];renderGrid();})
-    .catch(function(){grid.innerHTML='<div class="empty"><h3>Could not load portfolio</h3><p>Please try again.</p></div>';});
-}
-
-function esc(s){return(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-
-function renderGrid(){
-  var grid=document.getElementById('portfolio-grid');
-  if(!grid)return;
-  var list=activeFilter==='all'?photos:photos.filter(function(p){return p.category===activeFilter;});
-  list=list.slice().sort(function(a,b){return(a.sort_order||999)-(b.sort_order||999);});
-  if(!list.length){grid.innerHTML='<div class="empty"><h3>No photos found</h3><p>Try a different filter.</p></div>';return;}
-  grid.innerHTML=list.map(function(p){
-    return '<div class="pcard" data-id="'+esc(p.id)+'">'
-      +(p.is_featured?'<div class="pbadge">Featured</div>':'')
-      +'<img src="'+esc(p.image_url||'')+'" alt="'+esc(p.title)+'" data-lb-src="'+esc(p.image_url||'')+'" data-lb-title="'+esc(p.title)+'" data-lb-desc="'+esc(p.description||'')+'">'
-      +(adminOn?'<div class="edit-ov"><button class="edbtn edit-card-btn" data-id="'+esc(p.id)+'">Edit</button><button class="edbtn del del-card-btn" data-id="'+esc(p.id)+'">Delete</button></div>':'')
-      +'<div class="pcard-info"><h3>'+esc(p.title)+'</h3>'+(p.description?'<p>'+esc(p.description)+'</p>':'')+'<span class="cat-tag">'+esc(p.category||'Other')+'</span></div>'
-      +'</div>';
-  }).join('');
-  grid.querySelectorAll('img[data-lb-src]').forEach(function(img){
-    img.addEventListener('click',function(){openLB(img.getAttribute('data-lb-src'),img.getAttribute('data-lb-title'),img.getAttribute('data-lb-desc'));});
-    img.addEventListener('error',function(){img.src='https://placehold.co/400x200/1a1a1a/555?text=No+Image';});
+  document.addEventListener('click', function(e) {
+    var n = e.target.closest('a[data-page]');
+    if (n) { e.preventDefault(); showPage(n.getAttribute('data-page')); return; }
+    var g = e.target.closest('[data-goto]');
+    if (g) { e.preventDefault(); showPage(g.getAttribute('data-goto')); return; }
   });
-  grid.querySelectorAll('.edit-card-btn').forEach(function(btn){btn.addEventListener('click',function(e){e.stopPropagation();openEdit(btn.getAttribute('data-id'));});});
-  grid.querySelectorAll('.del-card-btn').forEach(function(btn){btn.addEventListener('click',function(e){e.stopPropagation();delPhoto(btn.getAttribute('data-id'));});});
-}
 
-var ft=document.getElementById('filter-tabs');
-if(ft){ft.addEventListener('click',function(e){var b=e.target.closest('.ftab');if(!b)return;activeFilter=b.getAttribute('data-filter');ft.querySelectorAll('.ftab').forEach(function(t){t.classList.remove('active');});b.classList.add('active');renderGrid();});}
+  document.getElementById('logo-btn').addEventListener('click', function() { showPage('home'); });
+  document.getElementById('hamburger-btn').addEventListener('click', function() {
+    document.getElementById('nav-menu').classList.toggle('open');
+  });
 
-var mb=document.getElementById('manage-btn');
-if(mb)mb.addEventListener('click',function(){adminOn=!adminOn;var bar=document.getElementById('admin-bar');if(bar)bar.style.display=adminOn?'flex':'none';renderGrid();showToast(adminOn?'Admin mode on':'Admin mode off');});
-var apb=document.getElementById('add-photo-btn');
-if(apb)apb.addEventListener('click',openAddModal);
+  function loadPortfolio() {
+    var grid = document.getElementById('portfolio-grid');
+    if (!grid) return;
+    grid.innerHTML = '<div class="loading">Loading Portfolio...</div>';
+    fetch(API_BASE + '/photos')
+      .then(function(r) { return r.json(); })
+      .then(function(d) { photos = d.photos || []; renderGrid(); })
+      .catch(function() {
+        grid.innerHTML = '<div class="empty"><h3>No photos yet</h3><p>Add some using the Manage Photos button.</p></div>';
+      });
+  }
 
-function openAddModal(){
-  editId=null;
-  document.getElementById('modal-title').textContent='Add Photo';
-  ['f-title','f-img','f-desc','f-year','f-sort'].forEach(function(id){document.getElementById(id).value='';});
-  document.getElementById('f-cat').value='Camaro';
-  document.getElementById('f-feat').checked=false;
-  document.getElementById('img-prev').style.display='none';
-  document.getElementById('photo-modal').classList.add('open');
-}
+  function esc(s) { return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
-function openEdit(id){
-  var p=photos.find(function(x){return x.id===id;});
-  if(!p)return;
-  editId=id;
-  document.getElementById('modal-title').textContent='Edit Photo';
-  document.getElementById('f-title').value=p.title||'';
-  document.getElementById('f-cat').value=p.category||'Other';
-  document.getElementById('f-year').value=p.year_built||'';
-  document.getElementById('f-img').value=p.image_url||'';
-  document.getElementById('f-desc').value=p.description||'';
-  document.getElementById('f-sort').value=p.sort_order||'';
-  document.getElementById('f-feat').checked=!!p.is_featured;
-  updateImgPreview();
-  document.getElementById('photo-modal').classList.add('open');
-}
+  function renderGrid() {
+    var grid = document.getElementById('portfolio-grid');
+    if (!grid) return;
+    var list = activeFilter === 'all' ? photos : photos.filter(function(p) { return p.category === activeFilter; });
+    list = list.slice().sort(function(a,b) { return (a.sort_order||999)-(b.sort_order||999); });
+    if (!list.length) {
+      grid.innerHTML = '<div class="empty"><h3>No photos found</h3><p>Try a different filter or add photos.</p></div>';
+      return;
+    }
+    grid.innerHTML = list.map(function(p) {
+      return '<div class="pcard" data-id="'+esc(p.id)+'">'
+        +(p.is_featured?'<div class="pbadge">Featured</div>':'')
+        +'<img src="'+esc(p.image_url||'')+'" alt="'+esc(p.title)+'" data-lb-src="'+esc(p.image_url||'')+'" data-lb-title="'+esc(p.title)+'" data-lb-desc="'+esc(p.description||'')+'">'
+        +(adminOn?'<div class="edit-ov"><button class="edbtn edit-card-btn" data-id="'+esc(p.id)+'">Edit</button><button class="edbtn del del-card-btn" data-id="'+esc(p.id)+'">Delete</button></div>':'')
+        +'<div class="pcard-info"><h3>'+esc(p.title)+'</h3>'+(p.description?'<p>'+esc(p.description)+'</p>':'')+'<span class="cat-tag">'+esc(p.category||'Other')+'</span></div>'
+        +'</div>';
+    }).join('');
+    grid.querySelectorAll('img[data-lb-src]').forEach(function(img) {
+      img.addEventListener('click', function() { openLB(img.getAttribute('data-lb-src'),img.getAttribute('data-lb-title'),img.getAttribute('data-lb-desc')); });
+      img.addEventListener('error', function() { img.src='https://placehold.co/400x200/1a1a1a/555?text=No+Image'; });
+    });
+    grid.querySelectorAll('.edit-card-btn').forEach(function(btn) {
+      btn.addEventListener('click', function(e) { e.stopPropagation(); openEdit(btn.getAttribute('data-id')); });
+    });
+    grid.querySelectorAll('.del-card-btn').forEach(function(btn) {
+      btn.addEventListener('click', function(e) { e.stopPropagation(); delPhoto(btn.getAttribute('data-id')); });
+    });
+  }
 
-function closeModal(){document.getElementById('photo-modal').classList.remove('open');}
-document.getElementById('modal-close-btn').addEventListener('click',closeModal);
-document.getElementById('modal-cancel-btn').addEventListener('click',closeModal);
-document.getElementById('photo-modal').addEventListener('click',function(e){if(e.target===this)closeModal();});
-var fi=document.getElementById('f-img');
-if(fi)fi.addEventListener('input',updateImgPreview);
-function updateImgPreview(){var url=document.getElementById('f-img').value;var prev=document.getElementById('img-prev');if(url){prev.src=url;prev.style.display='block';}else{prev.style.display='none';}}
+  document.getElementById('filter-tabs').addEventListener('click', function(e) {
+    var btn = e.target.closest('.ftab');
+    if (!btn) return;
+    activeFilter = btn.getAttribute('data-filter');
+    document.querySelectorAll('.ftab').forEach(function(t) { t.classList.remove('active'); });
+    btn.classList.add('active');
+    renderGrid();
+  });
 
-document.getElementById('modal-save-btn').addEventListener('click',function(){
-  var title=document.getElementById('f-title').value.trim();
-  if(!title){showToast('Please enter a title');return;}
-  var payload={title:title,category:document.getElementById('f-cat').value,year_built:document.getElementById('f-year').value,image_url:document.getElementById('f-img').value,description:document.getElementById('f-desc').value,sort_order:parseInt(document.getElementById('f-sort').value)||999,is_featured:document.getElementById('f-feat').checked};
-  var url=editId?BASE+'/photos/'+editId:BASE+'/photos';
-  var method=editId?'PUT':'POST';
-  fetch(url,{method:method,headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
-    .then(function(r){return r.json();})
-    .then(function(d){if(d.error)throw new Error(d.error);showToast(editId?'Photo updated!':'Photo added!');closeModal();loadPortfolio();})
-    .catch(function(e){showToast('Error: '+e.message);});
+  document.getElementById('manage-btn').addEventListener('click', function() {
+    adminOn = !adminOn;
+    document.getElementById('admin-bar').style.display = adminOn ? 'flex' : 'none';
+    renderGrid();
+    showToast(adminOn ? 'Admin mode on — hover cards to edit' : 'Admin mode off');
+  });
+
+  document.getElementById('add-photo-btn').addEventListener('click', openAddModal);
+
+  function openAddModal() {
+    editId = null;
+    document.getElementById('modal-title').textContent = 'Add Photo';
+    ['f-title','f-img','f-desc','f-year','f-sort'].forEach(function(id) { document.getElementById(id).value = ''; });
+    document.getElementById('f-cat').value = 'Camaro';
+    document.getElementById('f-feat').checked = false;
+    document.getElementById('img-prev').style.display = 'none';
+    document.getElementById('photo-modal').classList.add('open');
+  }
+
+  function openEdit(id) {
+    var p = photos.find(function(x) { return x.id === id; });
+    if (!p) return;
+    editId = id;
+    document.getElementById('modal-title').textContent = 'Edit Photo';
+    document.getElementById('f-title').value = p.title || '';
+    document.getElementById('f-cat').value = p.category || 'Other';
+    document.getElementById('f-year').value = p.year_built || '';
+    document.getElementById('f-img').value = p.image_url || '';
+    document.getElementById('f-desc').value = p.description || '';
+    document.getElementById('f-sort').value = p.sort_order || '';
+    document.getElementById('f-feat').checked = !!p.is_featured;
+    updateImgPreview();
+    document.getElementById('photo-modal').classList.add('open');
+  }
+
+  function closeModal() { document.getElementById('photo-modal').classList.remove('open'); }
+
+  document.getElementById('modal-close-btn').addEventListener('click', closeModal);
+  document.getElementById('modal-cancel-btn').addEventListener('click', closeModal);
+  document.getElementById('photo-modal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+
+  document.getElementById('f-img').addEventListener('input', updateImgPreview);
+  function updateImgPreview() {
+    var url = document.getElementById('f-img').value;
+    var prev = document.getElementById('img-prev');
+    if (url) { prev.src = url; prev.style.display = 'block'; } else { prev.style.display = 'none'; }
+  }
+
+  document.getElementById('modal-save-btn').addEventListener('click', function() {
+    var title = document.getElementById('f-title').value.trim();
+    if (!title) { showToast('Please enter a title'); return; }
+    var payload = {
+      title: title,
+      category: document.getElementById('f-cat').value,
+      year_built: document.getElementById('f-year').value,
+      image_url: document.getElementById('f-img').value,
+      description: document.getElementById('f-desc').value,
+      sort_order: parseInt(document.getElementById('f-sort').value) || 999,
+      is_featured: document.getElementById('f-feat').checked
+    };
+    var url = editId ? API_BASE+'/photos/'+editId : API_BASE+'/photos';
+    var method = editId ? 'PUT' : 'POST';
+    fetch(url, { method: method, headers: {'Content-Type':'application/json'}, body: JSON.stringify(payload) })
+      .then(function(r) { return r.json(); })
+      .then(function(d) { if (d.error) throw new Error(d.error); showToast(editId?'Photo updated!':'Photo added!'); closeModal(); loadPortfolio(); })
+      .catch(function(e) { showToast('Error: '+e.message); });
+  });
+
+  function delPhoto(id) {
+    if (!confirm('Delete this photo?')) return;
+    fetch(API_BASE+'/photos/'+id, {method:'DELETE'})
+      .then(function(r) { return r.json(); })
+      .then(function(d) { if (d.error) throw new Error(d.error); showToast('Deleted'); loadPortfolio(); })
+      .catch(function(e) { showToast('Error: '+e.message); });
+  }
+
+  function openLB(src,title,desc) {
+    if (!src) return;
+    document.getElementById('lb-img').src = src;
+    document.getElementById('lb-title').textContent = title;
+    document.getElementById('lb-desc').textContent = desc;
+    document.getElementById('lightbox').classList.add('open');
+  }
+  function closeLB() { document.getElementById('lightbox').classList.remove('open'); }
+  document.getElementById('lb-close-btn').addEventListener('click', closeLB);
+  document.getElementById('lightbox').addEventListener('click', function(e) { if (e.target === this) closeLB(); });
+
+  document.getElementById('contact-submit-btn').addEventListener('click', function() {
+    var n = document.getElementById('c-name').value.trim();
+    var em = document.getElementById('c-email').value.trim();
+    var m = document.getElementById('c-msg').value.trim();
+    if (!n || !em || !m) { showToast('Please fill in all required fields'); return; }
+    document.getElementById('form-ok').style.display = 'block';
+    ['c-name','c-email','c-phone','c-msg'].forEach(function(id) { document.getElementById(id).value = ''; });
+    showToast('Message sent!');
+  });
+
+  function showToast(msg) {
+    var t = document.getElementById('toast');
+    t.textContent = msg; t.classList.add('show');
+    setTimeout(function() { t.classList.remove('show'); }, 3000);
+  }
+
+  document.addEventListener('keydown', function(e) { if (e.key==='Escape') { closeModal(); closeLB(); } });
+
+  // Handle hash on load
+  var hash = window.location.hash.replace('#','');
+  var pages = ['home','about','awards','services','portfolio','contact'];
+  if (hash && pages.indexOf(hash) !== -1) {
+    showPage(hash);
+  }
 });
-
-function delPhoto(id){
-  if(!confirm('Delete this photo?'))return;
-  fetch(BASE+'/photos/'+id,{method:'DELETE'}).then(function(r){return r.json();}).then(function(d){if(d.error)throw new Error(d.error);showToast('Photo deleted');loadPortfolio();}).catch(function(e){showToast('Error: '+e.message);});
-}
-
-function openLB(src,title,desc){if(!src)return;document.getElementById('lb-img').src=src;document.getElementById('lb-title').textContent=title;document.getElementById('lb-desc').textContent=desc;document.getElementById('lightbox').classList.add('open');}
-function closeLB(){document.getElementById('lightbox').classList.remove('open');}
-document.getElementById('lb-close-btn').addEventListener('click',closeLB);
-document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this)closeLB();});
-
-document.getElementById('contact-submit-btn').addEventListener('click',function(){
-  var n=document.getElementById('c-name').value.trim();
-  var em=document.getElementById('c-email').value.trim();
-  var m=document.getElementById('c-msg').value.trim();
-  if(!n||!em||!m){showToast('Please fill in all required fields');return;}
-  document.getElementById('form-ok').style.display='block';
-  ['c-name','c-email','c-phone','c-msg'].forEach(function(id){document.getElementById(id).value='';});
-  showToast('Message sent!');
-});
-
-function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},3000);}
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeModal();closeLB();}});
-
-var hash=window.location.hash.replace('#','');
-var pages=['home','about','awards','services','portfolio','contact'];
-if(hash&&pages.indexOf(hash)!==-1)showPage(hash);
-})();</script>
+</script>
 </body>
 </html>
